@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DevHelp.FeedbackPage"
+             Title="Email sender">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Aquamarine">
+            <Label Text="Email" FontFamily="Signboard" FontSize="30" TextColor="Black" FontAttributes="Bold" Margin="10" HorizontalOptions="CenterAndExpand" />
+
+            <StackLayout Orientation="Horizontal" Spacing="15" Padding="10"  >
+                <Label Text="Send to:" FontFamily="Signboard" FontSize="Large" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Start" />
+                <Entry  TextColor="Black" Placeholder="Send to" Keyboard="Email" PlaceholderColor="Green" x:Name="UserEmail" HeightRequest="40" WidthRequest="300" BackgroundColor="Azure"
+                       ClearButtonVisibility="WhileEditing"  />
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal" Spacing="15" Padding="10" >
+                <Label HorizontalOptions="Start" FontFamily="Signboard" Text="From:" FontSize="Large" FontAttributes="Bold" TextColor="Black"/>
+                <Entry Keyboard="Text"  BackgroundColor="Azure" x:Name="UserName" HeightRequest="40" WidthRequest="300" ClearButtonVisibility="WhileEditing"/>
+            </StackLayout>
+            
+            <StackLayout Padding="10">
+                <Label Text="Message:" FontFamily="Signboard" FontSize="Large" FontAttributes="Bold" TextColor="Black" Margin="10" HorizontalOptions="Center" />
+                <Editor x:Name="UserMessage" Keyboard="Chat" HorizontalOptions="FillAndExpand" BackgroundColor="Azure" 
+                        HeightRequest="300" />
+            </StackLayout>
+            
+            <Button Text="Send" TextColor="Black" Clicked="SendMail" 
+                    FontSize="20" FontAttributes="Bold" x:Name="sendEmailBtn"
+                    Opacity="0.8" CornerRadius="30" HorizontalOptions="Center"/>
+
+            <Button Text="Home" 
+                    Clicked="Return_Clicked" 
+                    FontSize="20" FontAttributes="Bold" 
+                    HorizontalOptions="Center" VerticalOptions="EndAndExpand" 
+                    Opacity="0.5" CornerRadius="30" Margin="10"/>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

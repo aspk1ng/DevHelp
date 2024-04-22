@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.AppMainPage"
+             Title="Main Page">
+
+
+    <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <BoxView BackgroundColor="#F14F22" Grid.Column="0" Grid.Row="0"/> <!--GIT-->
+            <StackLayout Grid.Column="0" Grid.Row="0">
+                <Label Text="GIT" FontFamily="Signboard" TextColor="Black" FontAttributes="Bold" FontSize="40" HorizontalOptions="CenterAndExpand" Margin="0,150"/>
+                <Button  Scale="25" Opacity="0.0" Clicked="GitButton_Clicked" Margin="10,10,10,10"/>
+            </StackLayout>
+
+            <BoxView BackgroundColor="#01A4EE" Grid.Column="0" Grid.Row="1"/> <!--C#-->
+            <StackLayout Grid.Column="0" Grid.Row="1">
+                <Label Text="C#" FontFamily="Deutsch_Gothic" TextColor="Black" FontAttributes="Bold" FontSize="40" HorizontalOptions="CenterAndExpand" Margin="0,150"/>
+                <Button Scale="23.4" Opacity="0" Clicked="CsharpButton_Clicked" Margin="10,10,10,10" />
+            </StackLayout>
+
+            <BoxView BackgroundColor="#7EBA00" Grid.Column="1" Grid.Row="0"/> <!--Pictures-->
+            <StackLayout Grid.Column="1" Grid.Row="0">
+            <Label Text="Pictures" FontFamily="Signboard" TextColor="Black"  FontAttributes="Bold" FontSize="40" HorizontalOptions="CenterAndExpand" Margin="0,150"/>
+                <Button Clicked="GreenZone_Clicked" Scale="23.4" Opacity="0.0" Margin="10,10,10,10"/>
+            </StackLayout>
+
+            <BoxView BackgroundColor="#FEB901" Grid.Column="1" Grid.Row="1"/> <!--EmailSender-->
+            <StackLayout Grid.Column="1" Grid.Row="1" >
+            <Label Text="Email" TextColor="Black" FontAttributes="Bold" FontSize="40" HorizontalOptions="CenterAndExpand" Margin="0,150" FontFamily="Signboard"  />
+                <Button Clicked="Feedback_Clicked"  Scale="23.4" Opacity="0.0"  Margin="10,10,10,10"/>
+            </StackLayout>
+     </Grid>
+    
+</ContentPage>

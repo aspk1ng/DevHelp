@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DevHelp"
+             x:Class="DevHelp.GitPage" Title="Git Command">
+
+    <StackLayout >
+        <StackLayout BackgroundColor="Aquamarine" HeightRequest="100">
+            <Label Text="Command" FontSize="40" FontAttributes="Bold"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="Black"/>
+        </StackLayout>
+        
+        <ScrollView>
+            <StackLayout>
+                <FlexLayout Direction="Row" AlignItems="Center" Padding="10">
+                    <Button x:Name="ButtonUpDown" Text=">" Clicked="UD_Btn_Clicked"
+                            FontSize="Large" FontAttributes="Bold"
+                            BackgroundColor="Aquamarine" TextColor="Black"
+                            CornerRadius="30" Opacity="0.7"
+                            WidthRequest="80" HeightRequest="46"
+                            HorizontalOptions="Start"/>
+                    <Label  x:Name="ShowLabel" Text="GIT ADD" 
+                            IsVisible="True" FontAttributes="Bold"
+                            FontSize="Large" TextColor="Black" 
+                            Margin="15,0,0,0" HorizontalOptions="StartAndExpand"/>
+                </FlexLayout>
+                <StackLayout x:Name="ClosedStack" IsVisible="False" Margin="20,0">
+                    <Label Text="GIT ADD" FontSize="Medium" TextColor="Black" FontAttributes="Bold"/>
+                    <Label Text="Подготавливает данные файлы к следующему коммиту. Добавим их в 'индекс гита'. Индекс гита - это хранилище файлов, готовых к комиту." 
+                           FontSize="Medium" TextColor="Black"/>
+                    <Label Text="Пример :" FontSize="Medium" TextColor="Black"/>
+                    <Image Source="https://raw.githubusercontent.com/natenka/PyNEng/master/images/git/git_status_1.png" Aspect="AspectFill"/>
+                </StackLayout>
+
+
+
+
+
+                <FlexLayout Direction="Row" AlignItems="Center" Padding="10">
+                    <Button x:Name="ButtonUpDown2" Text=">" Clicked="UD_Btn_Clicked2"
+                            FontSize="Large" FontAttributes="Bold"
+                            BackgroundColor="Aquamarine" TextColor="Black"
+                            CornerRadius="30" Opacity="0.7"
+                            WidthRequest="80" HeightRequest="46"
+                            HorizontalOptions="Start"/>
+                    <Label  x:Name="ShowLabel2" Text="GIT CONFIG" 
+                            IsVisible="True" FontAttributes="Bold"
+                            FontSize="Large" TextColor="Black" 
+                            Margin="15,0,0,0" HorizontalOptions="StartAndExpand"/>
+                </FlexLayout>
+                <StackLayout x:Name="ClosedStack2" IsVisible="False" Margin="20,0">
+                    <Label Text="GIT CONFIG" FontSize="Medium" TextColor="Black" FontAttributes="Bold"/>
+                    <Label Text="Читает\меняет текущую конфигурацию на вашем ПК" 
+                           FontSize="Medium" TextColor="Black"/>
+                    <Label Text="Пример :" FontSize="Medium" TextColor="Black"/>
+                    <Image Source="https://server-gu.ru/wp-content/uploads/2023/05/gitglobalconfig7.png" Aspect="AspectFill"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+        
+        
+        
+        <Button Text="Home" Clicked="Return_Buttom"
+                FontSize="20" FontAttributes="Bold"  
+                HorizontalOptions="Center" VerticalOptions="EndAndExpand" 
+                Opacity="0.5" CornerRadius="30" Margin="10"
+                BackgroundColor="Aquamarine"/>
+    </StackLayout>
+</ContentPage>

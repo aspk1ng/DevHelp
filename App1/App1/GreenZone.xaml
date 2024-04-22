@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DevHelp"
+             x:Class="DevHelp.GreenZone" Title="Pictures">
+    <ContentPage.Content>
+        <StackLayout  BackgroundColor = "Aquamarine">
+            <ScrollView>
+                <StackLayout BackgroundColor="Aquamarine">
+                    <Image Source="{local:ImageResource DevHelp.Image.Cat.png}"  Margin="0,10"/>
+                    <Image Source="{local:ImageResource DevHelp.Image.catlap.png}" Margin="0,10"/>
+                    <Image Source="{local:ImageResource DevHelp.Image.manchik.png}" Margin="0,10"/>
+                    <WebView Margin="10" Source="https://www.youtube.com/embed/m93JcWFwwt8?si=9DfgCudQNQtbJDdI"
+                             WidthRequest="360"
+                             HeightRequest="240"
+                             MinimumHeightRequest="360"
+                             MinimumWidthRequest="240"/>
+
+                </StackLayout>
+                
+            </ScrollView>
+            <Button Text="Home" Clicked="Return_Clicked" FontAttributes="Bold"
+                    Opacity="0.5" HorizontalOptions="Center" VerticalOptions="EndAndExpand"
+                    Margin="0,10" CornerRadius="30" FontSize="20"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
